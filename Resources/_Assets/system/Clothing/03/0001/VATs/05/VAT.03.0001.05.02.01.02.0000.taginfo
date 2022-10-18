@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 3,
+    "clothingid": 1,
+    "description": "Jennifer City Shorts",
+    "filetype": 3,
+    "gender": 2,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.03.0001.05.02.0000",
+    "skinpath": "Clothing/03/0001/Rigs/05/Skin.03.0001.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.014215564355254173,
+    "vatmin": -0.021020544692873955,
+    "weight": 1
+}

@@ -1,0 +1,16 @@
+{
+    "age": 1,
+    "clothingelement": 2,
+    "clothingid": 15,
+    "description": "Pure Flow 2 Color Royal Pur Hibiscus",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0015.01.02.0000",
+    "skinpath": "Clothing/02/0015/Rigs/01/Skin.02.0015.01.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.03263426572084427,
+    "vatmin": -0.035301532596349716,
+    "weight": 2
+}

@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 40,
+    "description": "UGG Jena Womens Java 7",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0040.02.01.0000",
+    "skinpath": "Clothing/02/0040/Rigs/02/Skin.02.0040.02.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.05377550795674324,
+    "vatmin": -0.025186985731124878,
+    "weight": 2
+}

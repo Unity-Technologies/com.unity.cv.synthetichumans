@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 27,
+    "description": "Trochilus Boost",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0027.05.01.0000",
+    "skinpath": "Clothing/02/0027/Rigs/05/Skin.02.0027.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.022327618673443794,
+    "vatmin": -0.023443002253770828,
+    "weight": 3
+}

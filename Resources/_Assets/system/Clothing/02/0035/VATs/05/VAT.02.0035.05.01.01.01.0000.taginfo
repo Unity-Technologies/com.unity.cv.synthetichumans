@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 35,
+    "description": "Tory Burch Kaitlin Ballet Mestico in BlackGold",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0035.05.01.0000",
+    "skinpath": "Clothing/02/0035/Rigs/05/Skin.02.0035.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02151578851044178,
+    "vatmin": -0.025302009657025337,
+    "weight": 1
+}

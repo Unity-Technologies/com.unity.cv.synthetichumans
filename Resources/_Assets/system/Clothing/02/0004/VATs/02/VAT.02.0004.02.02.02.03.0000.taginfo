@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 4,
+    "description": "D-Rose Englewood II",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0004.02.02.0000",
+    "skinpath": "Clothing/02/0004/Rigs/02/Skin.02.0004.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.029881658032536507,
+    "vatmin": -0.025069160386919975,
+    "weight": 2
+}

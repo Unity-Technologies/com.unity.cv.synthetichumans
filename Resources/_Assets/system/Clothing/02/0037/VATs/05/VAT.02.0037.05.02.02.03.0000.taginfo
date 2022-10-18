@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 37,
+    "description": "Mens Billfish Slip On in Tan Beige",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0037.05.02.0000",
+    "skinpath": "Clothing/02/0037/Rigs/05/Skin.02.0037.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.01642385497689247,
+    "vatmin": -0.01566333696246147,
+    "weight": 2
+}

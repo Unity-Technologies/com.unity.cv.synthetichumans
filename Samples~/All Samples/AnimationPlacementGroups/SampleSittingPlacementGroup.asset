@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43011cbc41d504e678f9e167ebd5edcb, type: 3}
+  m_Name: SampleSittingPlacementGroup
+  m_EditorClassIdentifier: 
+  Placer:
+    rid: 3318166059643306018
+  AnimationTags:
+  - {fileID: 11400000, guid: 54f4cd7babe473e4cb8939a322a33c38, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3318166059643306018
+      type: {class: SittingPlacer, ns: Unity.CV.SyntheticHumans.Placement, asm: Unity.CV.SyntheticHumans.Runtime}
+      data:
+        PlacementRandomizer:
+          m_Enabled: 1
+          collapsed: 0
+          <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+          MaxRetries: 5
+          Cameras: []

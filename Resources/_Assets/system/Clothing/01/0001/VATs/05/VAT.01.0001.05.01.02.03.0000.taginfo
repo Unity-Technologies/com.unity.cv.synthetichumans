@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 1,
+    "clothingid": 1,
+    "description": "Jara Knit Top",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.01.0001.05.01.0000",
+    "skinpath": "Clothing/01/0001/Rigs/05/Skin.01.0001.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.21736648678779602,
+    "vatmin": -0.06942752748727798,
+    "weight": 2
+}

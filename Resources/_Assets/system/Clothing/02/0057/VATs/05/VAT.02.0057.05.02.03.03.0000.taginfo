@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 57,
+    "description": "Reebok SH NEWPORT LOW",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0057.05.02.0000",
+    "skinpath": "Clothing/02/0057/Rigs/05/Skin.02.0057.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.017366161569952965,
+    "vatmin": -0.01468070037662983,
+    "weight": 3
+}

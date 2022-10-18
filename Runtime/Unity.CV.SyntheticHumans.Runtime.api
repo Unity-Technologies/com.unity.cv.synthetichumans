@@ -1,0 +1,788 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.CV.SyntheticHumans
+{
+    [UnityEngine.CreateAssetMenu(fileName = @"New Asset Pack Manifest", menuName = @"Synthetic Humans/Tags/AssetPackManifest")] public class AssetPackManifest : UnityEngine.ScriptableObject
+    {
+        public System.Collections.Generic.List<Tags.SyntheticHumanTag> allActiveTags;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"poolRootPath")] public string assetPackRootPath;
+        public object assetProcessingBehaviorInstance;
+        public string assetProcessingBehaviorTypeName;
+        public bool reprocessAssetsOnBehaviorChange = true;
+        public AssetPackManifest() {}
+    }
+
+    public abstract class AssetPoolFilter : UnityEngine.ScriptableObject
+    {
+        protected AssetPoolFilter() {}
+        public abstract bool ShouldIncludeAsset(Tags.SyntheticHumanTag tag);
+    }
+
+    public class CollisionInfo
+    {
+        public UnityEngine.Collider HumanCollider;
+        public UnityEngine.Collider OtherCollider;
+        public UnityEngine.Vector3 PenetrationDirection;
+        public float PenetrationDistance;
+        public CollisionInfo() {}
+    }
+
+    public static class HumanBodyPartitioner
+    {
+        public static System.Collections.Generic.Dictionary<int, UnityEngine.Mesh> Partition(UnityEngine.Mesh mesh, MeshTopology topology);
+    }
+
+    public class HumanColliderManager : UnityEngine.MonoBehaviour
+    {
+        public HumanColliderManager() {}
+        public static System.Collections.Generic.List<CollisionInfo> GetCollisions(UnityEngine.GameObject human);
+        public static System.Collections.Generic.List<CollisionInfo> GetCollisions(UnityEngine.GameObject human, System.Collections.Generic.IEnumerable<UnityEngine.Collider> humanColliders);
+        public static bool HasCollision(UnityEngine.GameObject human, System.Collections.Generic.IEnumerable<UnityEngine.Collider> humanColliders, System.Collections.Generic.HashSet<UnityEngine.Collider> ignoreOtherColliders);
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"SyntheticHumanGenerationConfig", menuName = @"Synthetic Humans/Human Generation Config")] public class HumanGenerationConfig : UnityEngine.ScriptableObject
+    {
+        [UnityEngine.Tooltip(@"The age range for the generated humans, in years. Age will be picked randomly in the selected range. In the underlying logic, the selected age value will be mapped to one of our currently available age categories. These are:Newborn: 0-1 year old (0-12 months)Toddler: 1-3Child1: 3-6Child2: 6-9Preteen: 9-13Teen: 13-20Adult: 20-65Elderly: 65+.These categories are inclusive of the range minimum and exclusive of the maximum, similar to how Perception sampler ranges work. To get humans generated with a specific age category, plug in the exact range numbers listed above into the sampler range.The categories may become more granular as the package evolves.")] public UnityEngine.Perception.Randomization.Parameters.IntegerParameter ageRange;
+        [UnityEngine.Tooltip(@"The Synthetic Human Asset Pool to use for generating humans.")] public SyntheticHumanAssetPool assetTagPool;
+        [UnityEngine.Tooltip(@"The base prefab to use for generating humans. This can be used for adding any required components to the humans.")] public UnityEngine.GameObject basePrefab;
+        [UnityEngine.Tooltip(@"Enable to add colliders to generated humans. The colliders will be used in collision detection and collision-based placement.")] public bool enableColliderGeneration = true;
+        [UnityEngine.Tooltip(@"The ethnicities of the generated humans.")] public System.Collections.Generic.List<Tags.SyntheticHumanEthnicity> ethnicities;
+        [UnityEngine.Tooltip(@"The sexes of the generated humans.")] public System.Collections.Generic.List<Tags.SyntheticHumanGender> genders;
+        [UnityEngine.Tooltip(@"The range of heights to use for the generated humans. 0 is shortest and 1 is tallest.")] public UnityEngine.Perception.Randomization.Parameters.FloatParameter heightRange;
+        [UnityEngine.Tooltip(@"The method of blending shapes to achieve height/weight combinations. Normally this should be left on Additive.")] public Tags.SyntheticHumanHeightWeightSolver heightWeightSolver = Tags.SyntheticHumanHeightWeightSolver.Additive;
+        [UnityEngine.Tooltip(@"In relation to the Perception Keypoint Labeler: The depth at which the humans can occlude their own joints from the camera. If a joint is behind or inside the human model by more than this amount, it will be occluded.")] public float jointSelfOcclusionDistance;
+        [UnityEngine.Tooltip(@"For debugging purposes: A predefined list of SyntheticHuman tags can be used to generate humans. These will override randomized specs defined elsewhere in this Human Generation Config.")] public SingleHumanGenerationAssetRefs preselectedGenerationAssetRefs;
+        [UnityEngine.Tooltip(@"The clothing items that should be added to the generated humans.")] public System.Collections.Generic.List<Tags.ClothingParameters> requiredClothingParameters;
+        [UnityEngine.Tooltip(@"The range of weights to use for the generated humans. 0 is smallest and 1 is largest.")] public UnityEngine.Perception.Randomization.Parameters.FloatParameter weightRange;
+        public HumanGenerationConfig() {}
+    }
+
+    public abstract class HumanGenerationLifecycleSubscriber : UnityEngine.MonoBehaviour
+    {
+        protected HumanGenerationLifecycleSubscriber() {}
+        public virtual void OnGenerationComplete();
+    }
+
+    public class IgnoreAssetFilter : AssetPoolFilter
+    {
+        public Tags.SyntheticHumanTag ignoredTag;
+        public IgnoreAssetFilter() {}
+        public override bool ShouldIncludeAsset(Tags.SyntheticHumanTag tag);
+    }
+
+    public class MeshTopology
+    {
+        public Tags.SyntheticHumanAgeRange Age;
+        public Tags.SyntheticHumanGender Gender;
+        public MeshTopology() {}
+        public override bool Equals(object obj);
+        public override int GetHashCode();
+    }
+
+    public class SingleHumanGenerationAssetRefs : UnityEngine.MonoBehaviour
+    {
+        [UnityEngine.HideInInspector] public string animControllerName = @"AnimationRandomizerController";
+        [UnityEngine.HideInInspector] public UnityEngine.Material bodyMaterial;
+        [UnityEngine.Tooltip(@"Tag that determines material is applied to the body")] public Tags.MaterialTag bodyMatTag;
+        [UnityEngine.HideInInspector] public UnityEngine.Mesh bodyMesh;
+        [UnityEngine.Tooltip(@"Tag that determines which base mesh will be selected for the body")] public Tags.BodyTag bodyMeshTag;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<UnityEngine.Material> clothingMats;
+        [UnityEngine.Tooltip(@"List of tags that determine what materials are applied to clothing items in selectedClothing")] public System.Collections.Generic.List<Tags.MaterialTag> clothingMatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<UnityEngine.Texture2D> clothingPrimaryBlendVAT;
+        [UnityEngine.Tooltip(@"List of tags that determine what VATs are used for height blending on selectedClothing objects")] public System.Collections.Generic.List<Tags.VATTag> clothingPrimaryBlendVATTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<UnityEngine.Texture2D> clothingSecondaryBlendVAT;
+        [UnityEngine.Tooltip(@"List of tags that determine what VATs are used for weight blending on selectedClothing objects")] public System.Collections.Generic.List<Tags.VATTag> clothingSecondaryBlendVATTags;
+        [UnityEngine.Tooltip(@"List of tags that determine what clothing models to layer on top of the body mesh")] public System.Collections.Generic.List<Tags.ClothingTag> clothingTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<UnityEngine.GameObject> createdClothing;
+        [UnityEngine.HideInInspector] public UnityEngine.Material eyeMaterial;
+        [UnityEngine.Tooltip(@"Tag that determines material is applied to the eyes")] public Tags.MaterialTag eyeMatTag;
+        [UnityEngine.HideInInspector] public UnityEngine.Material faceMaterial;
+        [UnityEngine.Tooltip(@"Tag that determines material is applied to the face")] public Tags.MaterialTag faceMatTag;
+        [UnityEngine.HideInInspector] public UnityEngine.Texture2D faceVAT;
+        [UnityEngine.Tooltip(@"Tag that determines VAT will determine facial shape blends")] public Tags.VATTag faceVATTag;
+        [UnityEngine.HideInInspector] public UnityEngine.Material hairMaterial;
+        [UnityEngine.Tooltip(@"Tag that determines material is applied to the hair")] public Tags.MaterialTag hairMatTag;
+        [UnityEngine.HideInInspector] public UnityEngine.GameObject hairMesh;
+        [UnityEngine.Tooltip(@"Tag that determines which base mesh will be selected for the hair")] public Tags.HairTag hairMeshTag;
+        [UnityEngine.HideInInspector] public UnityEngine.Texture2D primaryBlendVAT;
+        [UnityEngine.Tooltip(@"Tag that determines VAT will be used for the height and weight in discrete + target blend solvers. Height only in additive solvers")] public Tags.VATTag primaryBlendVATTag;
+        [UnityEngine.Tooltip(@"Random seed used to generate this human. If 0, will store current seed from the scenario at time of generation")] public System.UInt32 randomizationSeed;
+        [UnityEngine.HideInInspector] public UnityEngine.Texture2D secondaryBlendVAT;
+        [UnityEngine.Tooltip(@"Tag that determines VAT will be used for the weight blend on additive solvers")] public Tags.VATTag secondaryBlendVATTag;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<UnityEngine.Mesh> selectedClothing;
+        public SingleHumanGenerationAssetRefs() {}
+        public void CopyGenerationAttributesFrom(SingleHumanGenerationAssetRefs source);
+    }
+
+    public class SingleHumanSpecification : UnityEngine.MonoBehaviour
+    {
+        [UnityEngine.Tooltip(@"Defines which base shapes will be selectable for a human when filtered by SyntheticHumanAgeCurrently split by groups that have significantly different silhouettes as a base shape")] public Tags.SyntheticHumanAgeRange age;
+        [UnityEngine.Tooltip(@"Defines which skin materials will be selectable for a human when filtered by SyntheticHumanEthnicity")] public Tags.SyntheticHumanEthnicity ethnicity;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sex")] [UnityEngine.Tooltip(@"Defines which base shapes will be selectable for a human when filtered by SyntheticHumanGender")] public Tags.SyntheticHumanGender gender;
+        public Tags.SyntheticHumanHeightRange heightRange;
+        [UnityEngine.Tooltip(@"Defines how height and weight will be appliedNone applies no blendingDiscrete picks one of 9 shapes on a matrix of height/weightTargetBlend will blend against one of 9 shapes using a sampled percentageAdditive blends height and weight independently with a sampled percentage")] public Tags.SyntheticHumanHeightWeightSolver heightWeightSolver;
+        [UnityEngine.Tooltip(@"The height of this human, normalized between 0-1 for short to tall.")] public float normalizedHeight;
+        [UnityEngine.Tooltip(@"The height of this human, normalized between 0-1 from lightweight to heavy.")] public float normalizedWeight;
+        [UnityEngine.Tooltip(@"A list of clothing categories to apply to a new human. If left blank, a default list will be generated")] public System.Collections.Generic.List<Tags.ClothingParameters> requiredClothing;
+        public Tags.SyntheticHumanWeightRange weightRange;
+        public SingleHumanSpecification() {}
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"SyntheticHumanAssetPool", menuName = @"Synthetic Humans/Asset Pool")] public class SyntheticHumanAssetPool : UnityEngine.ScriptableObject
+    {
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<AssetPoolFilter> assetPoolFilters;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.AnimationTag> filteredAnimTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.MaterialTag> filteredBodyMatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.BodyTag> filteredBodyTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.VATTag> filteredBodyVatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.MaterialTag> filteredClothingMatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.ClothingTag> filteredClothingTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.VATTag> filteredClothingVatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.MaterialTag> filteredEyeMatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.MaterialTag> filteredFaceMatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.VATTag> filteredFaceVatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.MaterialTag> filteredHairMatTags;
+        [UnityEngine.HideInInspector] public System.Collections.Generic.List<Tags.HairTag> filteredHairTags;
+        public System.Collections.Generic.List<UnityEngine.TextAsset> skeletonFiles;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sourceMetadataPools")] public System.Collections.Generic.List<AssetPackManifest> sourceAssetPacks;
+        public SyntheticHumanAssetPool() {}
+        public void RefreshAssets();
+    }
+
+    public class SyntheticHumanMaterialParameterModifier
+    {
+        public SyntheticHumanMaterialParameterModifier(UnityEngine.Material mat, UnityEngine.MaterialPropertyBlock propBlock) {}
+        public void Randomize();
+    }
+
+    public class SyntheticHumanVat : UnityEngine.MonoBehaviour
+    {
+        [UnityEngine.SerializeField] public SyntheticHumanVat.VatData vatData;
+        public SyntheticHumanVat() {}
+        public static UnityEngine.Mesh SyntheticHumanVatDelta(UnityEngine.Mesh vatMesh, UnityEngine.Vector3[] restVector, Tags.VATTag data, float deformationMultiplier = 1f, UnityEngine.Texture2D vatTexture = default(UnityEngine.Texture2D));
+        public struct VatData
+        {
+            public float vatMax;
+            public float vatMin;
+            public UnityEngine.Texture2D vatTex;
+        }
+    }
+}
+
+namespace Unity.CV.SyntheticHumans.Generators
+{
+    public static class HumanGenerator
+    {
+        public static UnityEngine.GameObject GenerateHuman(HumanGenerationConfig generationConfig, bool discardPartialGenerations = true);
+    }
+}
+
+namespace Unity.CV.SyntheticHumans.Labelers
+{
+    public class HumanMeshLabeler : UnityEngine.Perception.GroundTruth.CameraLabeler
+    {
+        public string annotationId = @"human mesh";
+        public HumanMeshLabeler.Encoding encoding;
+        public bool exportMeshTriangles;
+        public override string description { get; }
+        public override string labelerId { get; }
+        protected override bool supportsVisualization { get; }
+        public HumanMeshLabeler() {}
+        protected override void OnEndRendering(UnityEngine.Rendering.ScriptableRenderContext scriptableRenderContext);
+        protected override void Setup();
+        public enum Encoding
+        {
+            ASCII = 0,
+            Byte = 1,
+        }
+    }
+
+    public class HumanMetadataLabeler : UnityEngine.Perception.GroundTruth.CameraLabeler
+    {
+        public string annotationId = @"Human metadata";
+        public override string description { get; }
+        public override string labelerId { get; }
+        protected override bool supportsVisualization { get; }
+        public HumanMetadataLabeler() {}
+        protected override void OnBeginRendering(UnityEngine.Rendering.ScriptableRenderContext scriptableRenderContext);
+        protected override void Setup();
+    }
+
+    public class Keypoint3dLabeler : UnityEngine.Perception.GroundTruth.CameraLabeler
+    {
+        public string annotationId = @"keypoint3d";
+        public override string description { get; }
+        public override string labelerId { get; }
+        protected override bool supportsVisualization { get; }
+        public Keypoint3dLabeler() {}
+        protected override void OnEndRendering(UnityEngine.Rendering.ScriptableRenderContext scriptableRenderContext);
+        protected override void Setup();
+    }
+}
+
+namespace Unity.CV.SyntheticHumans.Placement
+{
+    [UnityEngine.CreateAssetMenu(fileName = @"NewAnimPlacer", menuName = @"Synthetic Humans/AnimationPlacementGroup")] public class AnimationPlacementGroup : UnityEngine.ScriptableObject
+    {
+        public System.Collections.Generic.List<Unity.CV.SyntheticHumans.Tags.AnimationTag> animationTags;
+        [UnityEngine.SerializeReference] public SyntheticHumanPlacer placer;
+        public AnimationPlacementGroup() {}
+        public Unity.CV.SyntheticHumans.Tags.AnimationTag Sample();
+    }
+
+    public class AnimationPlacementGroupSerializedFieldAttribute : UnityEngine.PropertyAttribute
+    {
+        public AnimationPlacementGroupSerializedFieldAttribute() {}
+    }
+
+    public abstract class GroundPlacer : SyntheticHumanPlacer
+    {
+        [AnimationPlacementGroupSerializedField] public bool forceToTouchGround = true;
+        protected GroundPlacer() {}
+        public override bool Place(UnityEngine.GameObject target);
+        protected abstract bool SamplePositionOnNavMesh(UnityEngine.Camera camera, Unity.AI.Navigation.NavMeshSurface surface, out UnityEngine.Vector3 position);
+        protected bool SamplePositionOnNavMesh(UnityEngine.Vector3 initialPosition, Unity.AI.Navigation.NavMeshSurface surface, out UnityEngine.Vector3 position);
+    }
+
+    public class GroundPlacerTag : NavMeshPlacerTag
+    {
+        public GroundPlacerTag() {}
+    }
+
+    public abstract class NavMeshPlacerTag : UnityEngine.MonoBehaviour
+    {
+        [UnityEngine.Tooltip(@"This type defines which component on the same game object the tag will use to fetch the NavMesh area type.")] public NavMeshPlacerTag.AreaType area;
+        protected NavMeshPlacerTag() {}
+        public static System.Collections.Generic.List<T> GetActivePlacerTags<T>() where T : NavMeshPlacerTag;
+        public int GetArea();
+        public static int GetAreaMask<T>() where T : NavMeshPlacerTag;
+        public static int GetAreaMask<T>(System.Collections.Generic.IEnumerable<T> tags) where T : NavMeshPlacerTag;
+        public bool IsActive();
+        public enum AreaType
+        {
+            All = 0,
+            [UnityEngine.InspectorName(@"NavMesh Modifier")] NavMeshModifier = 2,
+            [UnityEngine.InspectorName(@"NavMesh Volume")] NavMeshModifierVolume = 3,
+            [UnityEngine.InspectorName(@"NavMesh Surface")] NavMeshSurface = 1,
+        }
+    }
+
+    public static class NavMeshSurfaceExtensions
+    {
+        public static UnityEngine.Bounds GetBounds(this Unity.AI.Navigation.NavMeshSurface surface);
+        public static void UpdateNavMesh(this Unity.AI.Navigation.NavMeshSurface surface);
+    }
+
+    public static class PlacerUtility
+    {
+        public static UnityEngine.Bounds CalculateAABBBoundsForCameraFrustumAndNavMeshSurfaceBounds(UnityEngine.Camera camera, UnityEngine.Bounds bounds);
+        public static System.Collections.Generic.List<UnityEngine.Vector3> CalculateBoundsForCameraFrustumAndNavMeshSurfaceBounds(UnityEngine.Camera camera, UnityEngine.Bounds bounds);
+    }
+
+    [UnityEngine.RequireComponent(typeof(UnityEngine.Collider))] public class RayBasedGroundPlacerTag : UnityEngine.MonoBehaviour
+    {
+        public RayBasedGroundPlacerTag() {}
+        public static bool Raycast(UnityEngine.Ray ray, out UnityEngine.RaycastHit hit);
+    }
+
+    public class SittingPlacerTag : NavMeshPlacerTag
+    {
+        public float maximumDirectionAngle = 360f;
+        public float minimumDirectionAngle;
+        public UnityEngine.Bounds volume;
+        public SittingPlacerTag() {}
+        public float GetRadius();
+        public void UpdateVolumeByRenderingMesh();
+    }
+
+    public abstract class SyntheticHumanPlacer
+    {
+        protected UnityEngine.Perception.Randomization.Samplers.UniformSampler m_AnimationTimeSampler;
+        public Unity.CV.SyntheticHumans.Randomizers.NavMeshPlacementRandomizer placementRandomizer;
+        protected static Unity.Mathematics.Random s_RandomGenerator;
+        public abstract string name { get; }
+        protected SyntheticHumanPlacer() {}
+        protected static void AddNavMeshObstacle(UnityEngine.GameObject human);
+        protected virtual bool InCameraView(UnityEngine.Bounds bounds, UnityEngine.Camera camera, bool validateVisibility = false);
+        public abstract bool Place(UnityEngine.GameObject target);
+        protected bool PostValidation(UnityEngine.GameObject target, UnityEngine.Camera camera, System.Collections.Generic.IEnumerable<UnityEngine.Collider> humanColliders, System.Collections.Generic.IEnumerable<UnityEngine.Collider> allowedCollisions);
+        protected void SetupPlacementRandomizer();
+        protected static bool ValidateCollisions(UnityEngine.GameObject target, System.Collections.Generic.IEnumerable<UnityEngine.Collider> humanColliders, System.Collections.Generic.IEnumerable<UnityEngine.Collider> allowedCollisions);
+    }
+}
+
+namespace Unity.CV.SyntheticHumans.Randomizers
+{
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Perception/Blend Shape Randomizer")] public class BlendShapeRandomizer : UnityEngine.Perception.Randomization.Randomizers.Randomizer
+    {
+        public UnityEngine.Perception.Randomization.Parameters.FloatParameter m_blendShapeWeightParameter;
+        [UnityEngine.Tooltip(@"The blend shapes added by this Randomizer.")] public UnityEngine.GameObject[] newBlendShapes;
+        public BlendShapeRandomizer() {}
+        protected override void OnIterationStart();
+        protected override void OnScenarioStart();
+    }
+
+    [UnityEngine.AddComponentMenu(@"Perception/RandomizerTags/Blend Shape Randomizer Tag")] [UnityEngine.RequireComponent(typeof(UnityEngine.SkinnedMeshRenderer))] public class BlendShapeRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        [UnityEngine.Serialization.FormerlySerializedAs(@"CustomizedWeightRandomizationRange")] public bool customizedWeightRandomizationRange;
+        public float maxWeight = 100f;
+        public float minWeight;
+        public BlendShapeRandomizerTag() {}
+        public void AddNewBlendShape(UnityEngine.GameObject newBlendShape);
+        public void SetWeight(int blendShapeIndex, float rawWeight);
+    }
+
+    public class HumanGenerationConfigParameter : UnityEngine.Perception.Randomization.Parameters.CategoricalParameter<HumanGenerationConfig>
+    {
+        public HumanGenerationConfigParameter() {}
+    }
+
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Synthetic Humans/Human Generation Randomizer")] public class HumanGenerationRandomizer : UnityEngine.Perception.Randomization.Randomizers.Randomizer
+    {
+        public UnityEngine.Perception.Randomization.Parameters.IntegerParameter activeHumansInEachIteration;
+        public HumanGenerationConfigParameter humanGenerationConfigs;
+        public int humanPoolSize = 50;
+        public int poolRefreshIntervalIterations = 50;
+        public HumanGenerationRandomizer() {}
+        protected override void OnIterationEnd();
+        protected override void OnIterationStart();
+        protected override void OnScenarioStart();
+    }
+
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Synthetic Humans/Placement - NavMesh Placement Randomizer")] public class NavMeshPlacementRandomizer : UnityEngine.Perception.Randomization.Randomizers.Randomizer
+    {
+        public System.Collections.Generic.List<UnityEngine.Camera> cameras;
+        public int maxRetries = 5;
+        public NavMeshPlacementRandomizer() {}
+        protected override void OnIterationStart();
+        protected override void OnScenarioStart();
+    }
+
+    public class NavMeshPlacementRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public System.Collections.Generic.List<Unity.CV.SyntheticHumans.Placement.AnimationPlacementGroup> animationPlacementGroups;
+        public NavMeshPlacementRandomizerTag() {}
+        public virtual Unity.CV.SyntheticHumans.Placement.SyntheticHumanPlacer SamplePlacer();
+    }
+
+    public class PlacementRandomizer : UnityEngine.Perception.Randomization.Randomizers.Randomizer
+    {
+        public PlacementRandomizer() {}
+    }
+
+    public class PlacementRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public Unity.CV.SyntheticHumans.Tags.PlacementType solver;
+        public int solverIndex;
+        public PlacementRandomizerTag() {}
+    }
+
+    public class PlacementValidSurfaceTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public PlacementValidSurfaceTag() {}
+    }
+
+    public class PlacementVolumeProjectorTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public UnityEngine.Vector3 projectionVector;
+        public bool useAbsoluteProjectionAngle = true;
+        public PlacementVolumeProjectorTag() {}
+    }
+
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Synthetic Humans/Placement-  Pointlist Placement Randomizer")] public class PointListPlacementRandomizer : PlacementRandomizer
+    {
+        public PointListPlacementRandomizer.PointListSettings pointListSetting;
+        public PointListPlacementRandomizer() {}
+        protected override void OnIterationStart();
+        protected override void OnScenarioStart();
+        public struct PointListSettings
+        {
+            [UnityEngine.Tooltip(@"The anchor positions at which the targeted objects should be placed.")] public System.Collections.Generic.List<UnityEngine.GameObject> anchorPoints;
+            public bool randomizeRotation;
+            public UnityEngine.Vector2 rotationRangeX;
+            public UnityEngine.Vector2 rotationRangeY;
+            public UnityEngine.Vector2 rotationRangeZ;
+            public UnityEngine.Perception.Randomization.Parameters.FloatParameter xTranslationShift;
+            public UnityEngine.Perception.Randomization.Parameters.FloatParameter yTranslationShift;
+            public UnityEngine.Perception.Randomization.Parameters.FloatParameter zTranslationShift;
+        }
+    }
+
+    public class PointListPlacementRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public PointListPlacementRandomizerTag() {}
+    }
+
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Synthetic Humans/Synthetic Human Animation Randomizer")] public class SyntheticHumanAnimationRandomizer : UnityEngine.Perception.Randomization.Randomizers.Randomizer
+    {
+        public SyntheticHumanAnimationRandomizer() {}
+        protected override void OnIterationStart();
+    }
+
+    [UnityEngine.RequireComponent(typeof(UnityEngine.Animator))] public class SyntheticHumanAnimationRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        [UnityEngine.Tooltip(@"The Synthetic Human Asset Pool that can be used as a global animation pool selection")] public SyntheticHumanAssetPool animationTagPool;
+        public UnityEngine.Perception.Randomization.Parameters.CategoricalParameter<Unity.CV.SyntheticHumans.Tags.AnimationTag> animationTags;
+        public bool applyRootMotion;
+        [UnityEngine.HideInInspector] public Unity.CV.SyntheticHumans.Tags.AnimationTag selectedAnimationTag;
+        [UnityEngine.Tooltip(@"Will disregard animation tags in Animation Tags in favor of sourcing from Animation Tag Pool object")] public bool useGlobalAnimationPool;
+        public UnityEngine.AnimatorOverrideController animatorOverrideController { get; }
+        public SyntheticHumanAnimationRandomizerTag() {}
+        public void SampleAnimationTag();
+        public Unity.CV.SyntheticHumans.Tags.AnimationTag SampleAnimationTagFromPool(SyntheticHumanAssetPool assetPool, SingleHumanSpecification humanSpecs);
+    }
+
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Synthetic Humans/Placement- Transform Randomizer")] public class TransformPlacementRandomizer : PlacementRandomizer
+    {
+        [UnityEngine.Serialization.FormerlySerializedAs(@"passThroughSettings")] public TransformPlacementRandomizer.TransformRandomizerSettings randomizationSettings;
+        public TransformPlacementRandomizer() {}
+        protected override void OnIterationStart();
+        public struct TransformRandomizerSettings
+        {
+            public bool randomizePosition;
+            public bool randomizeRotation;
+            public bool randomizeScale;
+            public UnityEngine.Vector2 rotationRangeX;
+            public UnityEngine.Vector2 rotationRangeY;
+            public UnityEngine.Vector2 rotationRangeZ;
+            public UnityEngine.Vector2 sizeRange;
+            public UnityEngine.Vector3 volumeCenter;
+            public float volumeSizeX;
+            public float volumeSizeY;
+            public float volumeSizeZ;
+        }
+    }
+
+    public class TransformPlacementRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public TransformPlacementRandomizerTag() {}
+    }
+
+    [UnityEngine.Perception.Randomization.Randomizers.AddRandomizerMenu(@"Synthetic Humans/Placement-  Volume Projection Randomizer")] public class VolumeProjectionPlacementRandomizer : PlacementRandomizer
+    {
+        public UnityEngine.Perception.Randomization.Parameters.IntegerParameter projectionVolumeSampler;
+        public VolumeProjectionPlacementRandomizer.VolumeProjectionSettings volumeProjectionSetting;
+        public VolumeProjectionPlacementRandomizer() {}
+        public UnityEngine.Vector3 GetProjectedSpawnPoint(UnityEngine.Collider inputSpawnCollider);
+        protected override void OnIterationStart();
+        protected override void OnScenarioStart();
+        public struct VolumeProjectionSettings
+        {
+            public UnityEngine.Perception.Randomization.Parameters.Vector3Parameter boundsSampler;
+            [UnityEngine.Tooltip(@"Number of times to attempt to place each human on a valid collision surface before it is deactivated .")] public int maxPlacementAttempts;
+            public bool randomizeRotation;
+            public UnityEngine.Vector2 rotationRangeX;
+            public UnityEngine.Vector2 rotationRangeY;
+            public UnityEngine.Vector2 rotationRangeZ;
+        }
+    }
+
+    public class VolumeProjectionPlacementRandomizerObjectTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
+    {
+        public VolumeProjectionPlacementRandomizerObjectTag() {}
+    }
+}
+
+namespace Unity.CV.SyntheticHumans.Tags
+{
+    [UnityEngine.CreateAssetMenu(fileName = @"NewAnimTag", menuName = @"Synthetic Humans/Tags/Animation")] public class AnimationTag : SyntheticHumanTag
+    {
+        public SyntheticHumanAgeRange age;
+        public SyntheticHumanFileExtension fileType;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sex")] public SyntheticHumanGender gender;
+        public SyntheticHumanHeightRange height;
+        public SyntheticHumanWeightRange weight;
+        public AnimationTag() {}
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"NewBodyTag", menuName = @"Synthetic Humans/Tags/Body")] public class BodyTag : MeshTag
+    {
+        public SyntheticHumanAgeRange age;
+        public SyntheticHumanFileExtension fileType;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sex")] public SyntheticHumanGender gender;
+        public SyntheticHumanHeightRange height;
+        public SyntheticHumanWeightRange weight;
+        public BodyTag() {}
+    }
+
+    public struct ClothingParameters
+    {
+        [UnityEngine.Serialization.FormerlySerializedAs(@"baseMeshTag")] public SyntheticHumanClothingElement clothingElement;
+        public SyntheticHumanClothingLayer layer;
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"NewBodyTag", menuName = @"Synthetic Humans/Tags/Clothing")] public class ClothingTag : MeshTag
+    {
+        public SyntheticHumanAgeRange age;
+        public SyntheticHumanEnumBool attachedToJoint;
+        public SyntheticHumanClothingElement clothingElement;
+        public SyntheticHumanEthnicity ethnicity;
+        public SyntheticHumanFileExtension fileType;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sex")] public SyntheticHumanGender gender;
+        public SyntheticHumanHeightRange height;
+        public string jointName;
+        public SyntheticHumanClothingLayer layer;
+        public string materialId;
+        public SyntheticHumanMaterialType materialType;
+        public SyntheticHumanEnumBool resizable;
+        public UnityEngine.Vector3 rotationOffset;
+        public ClothingTag() {}
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"NewHairTag", menuName = @"Synthetic Humans/Tags/Hair")] public class HairTag : SyntheticHumanTag
+    {
+        public SyntheticHumanAgeRange age;
+        public SyntheticHumanFileExtension fileType;
+        public SyntheticHumanHeightRange height;
+        public int indexMax;
+        public float vatMax;
+        public float vatMin;
+        public HairTag() {}
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"NewBodyTag", menuName = @"Synthetic Humans/Tags/Material")] public class MaterialTag : SyntheticHumanTag
+    {
+        public SyntheticHumanAgeRange age;
+        public SyntheticHumanEnumBool allowPropertyRandomization;
+        public SyntheticHumanClothingElement clothingElement;
+        public SyntheticHumanEthnicity ethnicity;
+        public SyntheticHumanEyeColor eyeColor;
+        public SyntheticHumanFileExtension fileType;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sex")] public SyntheticHumanGender gender;
+        public SyntheticHumanHeightRange height;
+        public SyntheticHumanElement humanElement;
+        public bool isBase;
+        public string materialId;
+        public SyntheticHumanMaterialType materialType;
+        public MaterialTag() {}
+    }
+
+    public abstract class MeshTag : SyntheticHumanTag
+    {
+        [Newtonsoft.Json.JsonProperty(@"boneindex")] public System.Collections.Generic.List<string> boneOrder;
+        protected MeshTag() {}
+    }
+
+    public enum PlacementType
+    {
+        CameraProjection = 3,
+        Navmesh = 1,
+        None = 0,
+        PointList = 5,
+        TransformRandomizer = 4,
+        VolumeProjection = 2,
+    }
+
+    public enum SyntheticHumanAgeRange
+    {
+        Adult = 5,
+        Child1 = 2,
+        Child2 = 7,
+        Elderly = 6,
+        Newborn = 8,
+        None = 0,
+        Preteen = 3,
+        Teen = 4,
+        Toddler = 1,
+    }
+
+    public static class SyntheticHumanAgeRangeExtension
+    {
+        public static System.ValueTuple<int, int> GetSyntheticHumanAgeRange(this SyntheticHumanAgeRange syntheticHumanAgeRange);
+        public static SyntheticHumanAgeRange GetSyntheticHumanAgeRange(int age);
+    }
+
+    public enum SyntheticHumanClothingElement
+    {
+        FullBody = 6,
+        Glove = 5,
+        HeadCover = 4,
+        Neutral = 7,
+        None = 0,
+        Pants = 3,
+        Shirt = 1,
+        Shoe = 2,
+    }
+
+    public enum SyntheticHumanClothingLabel
+    {
+        ActiveWear = 1,
+        Casual = 2,
+        ColdWeather = 4,
+        Generic = 3,
+        None = 0,
+    }
+
+    public enum SyntheticHumanClothingLayer
+    {
+        Five = 5,
+        Four = 4,
+        None = 0,
+        One = 1,
+        Three = 3,
+        Two = 2,
+    }
+
+    public enum SyntheticHumanElement
+    {
+        Body = 1,
+        Eye = 4,
+        Hair = 3,
+        Head = 2,
+        None = 0,
+    }
+
+    public enum SyntheticHumanEnumBool
+    {
+        False = 1,
+        None = 0,
+        True = 2,
+    }
+
+    public enum SyntheticHumanEthnicity
+    {
+        African = 4,
+        Asian = 2,
+        Caucasian = 1,
+        LatinAmerican = 3,
+        MiddleEastern = 5,
+        None = 0,
+    }
+
+    public enum SyntheticHumanEyeColor
+    {
+        Amber = 1,
+        Blue = 2,
+        Brown = 3,
+        Gray = 4,
+        Green = 5,
+        Hazel = 6,
+        None = 0,
+        Special = 7,
+    }
+
+    public enum SyntheticHumanFacialFeatureLabel
+    {
+        Hair = 1,
+        LiverSpots = 2,
+        None = 0,
+        Wrinkles = 3,
+    }
+
+    public enum SyntheticHumanFileExtension
+    {
+        anim = 6,
+        exr = 2,
+        fbx = 1,
+        mat = 5,
+        None = 0,
+        obj = 3,
+        png = 4,
+    }
+
+    public enum SyntheticHumanGender
+    {
+        Female = 2,
+        Male = 1,
+        Neutral = 3,
+        None = 0,
+    }
+
+    public class SyntheticHumanGlobalTagsInfo : UnityEngine.ScriptableObject
+    {
+        public static float maxHeight = 198.12f;
+        public static float minHeight = 147.32f;
+        public SyntheticHumanGlobalTagsInfo() {}
+    }
+
+    public enum SyntheticHumanHeightRange
+    {
+        Average = 2,
+        None = 0,
+        Short = 1,
+        Tall = 3,
+    }
+
+    public enum SyntheticHumanHeightWeightSolver
+    {
+        Additive = 3,
+        BlendTarget = 2,
+        Discrete = 1,
+        None = 0,
+    }
+
+    public enum SyntheticHumanMaterialType
+    {
+        Body = 5,
+        Fabric = 1,
+        Hair = 6,
+        Head = 4,
+        Metal = 2,
+        None = 0,
+        Plastic = 3,
+        Prop = 7,
+        Shoe = 8,
+    }
+
+    public enum SyntheticHumanMuscleDefinitionRange
+    {
+        Four = 4,
+        None = 0,
+        One = 1,
+        Three = 3,
+        Two = 2,
+    }
+
+    public enum SyntheticHumanShapeLabel
+    {
+        FatOverlay = 3,
+        MuscleBulk = 2,
+        None = 0,
+        Pregnant = 1,
+    }
+
+    public abstract class SyntheticHumanTag : UnityEngine.ScriptableObject
+    {
+        public const string FOLDER_TAG_IDENTIFIER = @"FolderTag";
+        public UnityEngine.Object linkedAsset;
+        protected SyntheticHumanTag() {}
+        public bool SetFieldsFromTemplate(SyntheticHumanTag template);
+    }
+
+    public enum SyntheticHumanTextureType
+    {
+        Albedo = 1,
+        Identity = 5,
+        Mask = 2,
+        None = 0,
+        Normal = 3,
+        Tangent = 6,
+        TranslucencyGloss = 4,
+    }
+
+    public enum SyntheticHumanWeightRange
+    {
+        Average = 2,
+        Large = 3,
+        None = 0,
+        Small = 1,
+    }
+
+    [UnityEngine.CreateAssetMenu(fileName = @"NewVATTag", menuName = @"Synthetic Humans/Tags/VAT")] public class VATTag : SyntheticHumanTag
+    {
+        public SyntheticHumanAgeRange age;
+        public SyntheticHumanElement element;
+        public SyntheticHumanEthnicity ethnicity;
+        public SyntheticHumanFileExtension fileType;
+        [UnityEngine.Serialization.FormerlySerializedAs(@"sex")] public SyntheticHumanGender gender;
+        public SyntheticHumanHeightRange height;
+        public bool loadWeightsFromMesh;
+        [Newtonsoft.Json.JsonProperty(@"meshpath")] public string parentMesh;
+        public SyntheticHumanFileExtension restGeoFileType;
+        public float vatmax;
+        public float vatmin;
+        public SyntheticHumanWeightRange weight;
+        public VATTag() {}
+    }
+}

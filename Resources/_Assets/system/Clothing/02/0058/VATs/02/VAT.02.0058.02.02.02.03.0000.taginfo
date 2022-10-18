@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 58,
+    "description": "Reebok SH PRIME COURT MID",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0058.02.02.0000",
+    "skinpath": "Clothing/02/0058/Rigs/02/Skin.02.0058.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02992813102900982,
+    "vatmin": -0.024745693430304527,
+    "weight": 2
+}

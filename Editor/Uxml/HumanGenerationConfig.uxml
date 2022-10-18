@@ -1,0 +1,11 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements">
+    <VisualElement class="outer-container" name="outer-container">
+        <Style src="/Packages/com.unity.cv.synthetichumans/Editor/Uss/styles.uss" />
+        <VisualElement name="human_properties" class="inner-container">
+            <Label text="Human Properties" name="human-properties-title" class="title-label"/>
+        </VisualElement>
+        <VisualElement name="generation_settings" class="inner-container">
+            <Label text="Generation Settings" name="generation-settings-title" class="title-label"/>
+        </VisualElement>                
+    </VisualElement>
+</UXML>

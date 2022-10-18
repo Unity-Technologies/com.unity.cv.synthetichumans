@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 24,
+    "description": "Reebok CLASSIC LEGACY II",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0024.05.01.0000",
+    "skinpath": "Clothing/02/0024/Rigs/05/Skin.02.0024.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02179526537656784,
+    "vatmin": -0.020800266414880753,
+    "weight": 3
+}

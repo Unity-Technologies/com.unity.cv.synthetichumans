@@ -1,0 +1,21 @@
+{
+    "name": "Unity.CV.SyntheticHumans.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Perception.Runtime",
+        "Unity.Perception.Editor",
+        "Unity.AI.Navigation",
+        "Unity.CV.SyntheticHumans.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

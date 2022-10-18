@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 60,
+    "description": "Womens Teva Capistrano Bootie",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0060.02.02.0000",
+    "skinpath": "Clothing/02/0060/Rigs/02/Skin.02.0060.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.036944806575775146,
+    "vatmin": -0.02487899735569954,
+    "weight": 2
+}

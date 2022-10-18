@@ -1,0 +1,19 @@
+{
+    "name": "Unity.CV.SyntheticHumans.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Collections",
+        "Unity.Mathematics",
+        "Unity.Perception.Runtime",
+        "Unity.AI.Navigation"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

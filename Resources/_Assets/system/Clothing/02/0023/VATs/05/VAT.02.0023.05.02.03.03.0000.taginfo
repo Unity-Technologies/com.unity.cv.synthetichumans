@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 23,
+    "description": "Reebok FS-HI-INT-R12",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0023.05.02.0000",
+    "skinpath": "Clothing/02/0023/Rigs/05/Skin.02.0023.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.017522640526294708,
+    "vatmin": -0.014759768731892109,
+    "weight": 3
+}

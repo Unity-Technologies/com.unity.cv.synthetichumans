@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 3,
+    "clothingid": 0,
+    "description": "Darcy Woven Pants",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.03.0000.02.01.0000",
+    "skinpath": "Clothing/03/0000/Rigs/02/Skin.03.0000.02.01.0000",
+    "tagtype": "vat",
+    "vatmax": 9.53674295089968e-09,
+    "vatmin": -9.53674295089968e-09,
+    "weight": 1
+}

@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 3,
+    "clothingid": 7,
+    "description": "jeans",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.03.0007.05.01.0000",
+    "skinpath": "Clothing/03/0007/Rigs/05/Skin.03.0007.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.025273531675338745,
+    "vatmin": -0.025551490485668182,
+    "weight": 1
+}

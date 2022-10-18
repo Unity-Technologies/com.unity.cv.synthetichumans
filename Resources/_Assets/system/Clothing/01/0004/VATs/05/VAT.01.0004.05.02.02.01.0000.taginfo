@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 1,
+    "clothingid": 4,
+    "description": "Raph Knit Top",
+    "filetype": 3,
+    "gender": 2,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.01.0004.05.02.0000",
+    "skinpath": "Clothing/01/0004/Rigs/05/Skin.01.0004.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.08557002991437912,
+    "vatmin": -0.2574135661125183,
+    "weight": 2
+}

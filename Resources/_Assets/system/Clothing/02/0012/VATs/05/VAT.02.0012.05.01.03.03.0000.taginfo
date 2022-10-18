@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 12,
+    "description": "Mens Gold Cup ASV Dress Casual Venitian Dark Brown Leather",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0012.05.01.0000",
+    "skinpath": "Clothing/02/0012/Rigs/05/Skin.02.0012.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.024345388635993004,
+    "vatmin": -0.023533476516604424,
+    "weight": 3
+}

@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 51,
+    "description": "UGG Cambridge Womens Black 7",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0051.05.01.0000",
+    "skinpath": "Clothing/02/0051/Rigs/05/Skin.02.0051.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.018834343180060387,
+    "vatmin": -0.014484023675322533,
+    "weight": 2
+}

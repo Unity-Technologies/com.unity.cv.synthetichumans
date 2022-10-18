@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 1,
+    "clothingid": 2,
+    "description": "Lauren Jacket",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.01.0002.05.01.0000",
+    "skinpath": "Clothing/01/0002/Rigs/05/Skin.01.0002.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.1828165054321289,
+    "vatmin": -0.13541541993618011,
+    "weight": 3
+}

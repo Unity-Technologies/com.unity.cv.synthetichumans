@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 55,
+    "description": "Reebok ZIGLITE RUSH",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0055.05.01.0000",
+    "skinpath": "Clothing/02/0055/Rigs/05/Skin.02.0055.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.0025377606507390738,
+    "vatmin": -0.0026499510277062654,
+    "weight": 1
+}

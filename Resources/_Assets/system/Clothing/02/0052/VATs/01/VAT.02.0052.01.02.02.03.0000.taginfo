@@ -1,0 +1,16 @@
+{
+    "age": 1,
+    "clothingelement": 2,
+    "clothingid": 52,
+    "description": "Crazy 8",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0052.01.02.0000",
+    "skinpath": "Clothing/02/0052/Rigs/01/Skin.02.0052.01.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.03657221794128418,
+    "vatmin": -0.03700471669435501,
+    "weight": 2
+}

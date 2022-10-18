@@ -1,0 +1,19 @@
+{
+  "name": "com.unity.cv.synthetichumans",
+  "displayName": "Synthetic Humans",
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "description": "Tools for diverse contextual generation and placement of synthetic humans.",
+  "dependencies": {
+    "com.unity.ai.navigation": "1.0.0-exp.4",
+    "com.unity.perception": "0.16.0-preview.2",
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  },
+  "samples": [
+    {
+      "description": "Pre-made Scenes, human generation configs, human base prefabs, keypoint labeler configs, animation placement maps and more, made to accelerate your workflows.",
+      "displayName": "All Samples",
+      "path": "Samples~/All Samples"
+    }    
+  ]
+}

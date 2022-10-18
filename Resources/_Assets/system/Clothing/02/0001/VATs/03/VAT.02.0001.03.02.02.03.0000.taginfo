@@ -1,0 +1,16 @@
+{
+    "age": 3,
+    "clothingelement": 2,
+    "clothingid": 1,
+    "description": "11 Pro SL TRX FG",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0001.03.02.0000",
+    "skinpath": "Clothing/02/0001/Rigs/03/Skin.02.0001.03.02.0000",
+    "tagtype": "vat",
+    "vatmax": 1.3589858838258806e-07,
+    "vatmin": -1.5258788721439487e-07,
+    "weight": 2
+}

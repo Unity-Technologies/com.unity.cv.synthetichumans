@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 33,
+    "description": "Asics GEL Dirt Dog 4 Sun Flame Black",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0033.02.02.0000",
+    "skinpath": "Clothing/02/0033/Rigs/02/Skin.02.0033.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02984505519270897,
+    "vatmin": -0.024896221235394478,
+    "weight": 2
+}

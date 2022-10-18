@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 44,
+    "description": "Womens Hikerfish Boot in Black Leopard ",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0044.05.01.0000",
+    "skinpath": "Clothing/02/0044/Rigs/05/Skin.02.0044.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02224777080118656,
+    "vatmin": -0.02685581147670746,
+    "weight": 1
+}

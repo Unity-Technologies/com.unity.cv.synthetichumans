@@ -1,0 +1,16 @@
+{
+    "age": 1,
+    "clothingelement": 2,
+    "clothingid": 36,
+    "description": "UGG Classic Tall Womens Boots Grey 7",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0036.01.01.0000",
+    "skinpath": "Clothing/02/0036/Rigs/01/Skin.02.0036.01.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.060081738978624344,
+    "vatmin": -0.035638730973005295,
+    "weight": 2
+}

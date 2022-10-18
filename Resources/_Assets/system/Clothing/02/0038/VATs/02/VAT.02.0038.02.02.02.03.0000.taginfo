@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 38,
+    "description": "MARTIN WEDGE LACE BOOT",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0038.02.02.0000",
+    "skinpath": "Clothing/02/0038/Rigs/02/Skin.02.0038.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.04247447848320007,
+    "vatmin": -0.02476896159350872,
+    "weight": 2
+}

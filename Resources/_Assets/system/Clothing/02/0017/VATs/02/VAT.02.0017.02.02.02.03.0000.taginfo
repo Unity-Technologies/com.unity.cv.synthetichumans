@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 17,
+    "description": "Reebok Retro Rush",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0017.02.02.0000",
+    "skinpath": "Clothing/02/0017/Rigs/02/Skin.02.0017.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.029793528839945793,
+    "vatmin": -0.025106286630034447,
+    "weight": 2
+}

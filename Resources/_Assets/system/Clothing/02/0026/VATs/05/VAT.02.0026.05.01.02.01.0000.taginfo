@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 26,
+    "description": "Court Attitude",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0026.05.01.0000",
+    "skinpath": "Clothing/02/0026/Rigs/05/Skin.02.0026.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.017962168902158737,
+    "vatmin": -0.021354636177420616,
+    "weight": 2
+}

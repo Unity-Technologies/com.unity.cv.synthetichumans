@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 14,
+    "description": "Mens Tremont Kiltie Tassel Loafer Black Amaretto ",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0014.02.01.0000",
+    "skinpath": "Clothing/02/0014/Rigs/02/Skin.02.0014.02.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.029313286766409874,
+    "vatmin": -0.024852408096194267,
+    "weight": 2
+}

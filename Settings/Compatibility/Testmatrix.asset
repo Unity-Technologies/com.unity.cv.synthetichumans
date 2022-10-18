@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9644e0637006fac45b08d16724636308, type: 3}
+  m_Name: Testmatrix
+  m_EditorClassIdentifier: 
+  matrixPairs:
+  - guiTagTypeIndex: 1
+    guiTagTypeName: bodyMeshTag
+    guiParentPoolListIndex: 2
+    guiParentPoolListName: filteredBodyTags
+    parentPoolListDuplicate:
+    - {fileID: -5825956672048662948, guid: a2dc1029743ab3947b481b831cac9361, type: 3}
+    - {fileID: -5825956672048662948, guid: 3bbdc055c3b4fbc46a68af56c0b17601, type: 3}
+    guiExternalClassSelectionIndexes: 00000000
+    guiExternalClassSelectionNames:
+    - SingleHumanSpecification
+    externalClassSelections:
+    - propertyMatchIndexes: 00000000
+      propertyMatchNames:
+      - age
+      nestedParameterNames:
+      - age
+      nestedParameterIndexes: 00000000
+    internalMatchProperties: []
+  - guiTagTypeIndex: 6
+    guiTagTypeName: bodyMatTag
+    guiParentPoolListIndex: 7
+    guiParentPoolListName: filteredBodyMatTags
+    parentPoolListDuplicate: []
+    guiExternalClassSelectionIndexes: 00000000
+    guiExternalClassSelectionNames:
+    - SingleHumanSpecification
+    externalClassSelections:
+    - propertyMatchIndexes: 00000000
+      propertyMatchNames:
+      - age
+      nestedParameterNames:
+      - age
+      nestedParameterIndexes: 00000000
+    internalMatchProperties: []

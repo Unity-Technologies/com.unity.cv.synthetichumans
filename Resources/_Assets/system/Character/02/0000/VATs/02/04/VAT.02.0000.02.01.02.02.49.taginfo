@@ -1,0 +1,14 @@
+{
+    "age": 2,
+    "element": 2,
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.01.0000.02.01.0000",
+    "skinpath": "/Character/01/0000/Rigs/02/Skin.01.0000.02.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.016730498522520065,
+    "vatmin": -0.0084652965888381,
+    "weight": 2
+}

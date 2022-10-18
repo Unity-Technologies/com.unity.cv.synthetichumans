@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 49,
+    "description": "Timberland Mens Earthkeepers Casco Bay Canvas Oxford",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0049.05.01.0000",
+    "skinpath": "Clothing/02/0049/Rigs/05/Skin.02.0049.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02145480178296566,
+    "vatmin": -0.02527591586112976,
+    "weight": 1
+}

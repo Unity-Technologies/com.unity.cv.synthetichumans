@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 45,
+    "description": "Reebok SL FLIP UPDATE",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0045.05.01.0000",
+    "skinpath": "Clothing/02/0045/Rigs/05/Skin.02.0045.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02029826119542122,
+    "vatmin": -0.024485386908054352,
+    "weight": 3
+}

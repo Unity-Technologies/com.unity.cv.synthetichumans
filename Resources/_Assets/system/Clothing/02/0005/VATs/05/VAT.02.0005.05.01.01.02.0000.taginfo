@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 5,
+    "description": "Dragon W",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0005.05.01.0000",
+    "skinpath": "Clothing/02/0005/Rigs/05/Skin.02.0005.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.0035009621642529964,
+    "vatmin": -0.0032346295192837715,
+    "weight": 1
+}

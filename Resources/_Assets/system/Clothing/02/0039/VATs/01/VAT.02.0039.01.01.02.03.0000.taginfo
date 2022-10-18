@@ -1,0 +1,16 @@
+{
+    "age": 1,
+    "clothingelement": 2,
+    "clothingid": 39,
+    "description": "Reebok FUEL TRAIN",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0039.01.01.0000",
+    "skinpath": "Clothing/02/0039/Rigs/01/Skin.02.0039.01.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.03247413411736488,
+    "vatmin": -0.03484689071774483,
+    "weight": 2
+}

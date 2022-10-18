@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 43,
+    "description": "D ROSE 45",
+    "filetype": 3,
+    "gender": 2,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0043.05.02.0000",
+    "skinpath": "Clothing/02/0043/Rigs/05/Skin.02.0043.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02383974939584732,
+    "vatmin": -0.026483135297894478,
+    "weight": 2
+}

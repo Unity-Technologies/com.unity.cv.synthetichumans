@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 29,
+    "description": "Amberlight Up W",
+    "filetype": 3,
+    "gender": 1,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0029.02.01.0000",
+    "skinpath": "Clothing/02/0029/Rigs/02/Skin.02.0029.02.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.037212811410427094,
+    "vatmin": -0.024932069703936577,
+    "weight": 2
+}

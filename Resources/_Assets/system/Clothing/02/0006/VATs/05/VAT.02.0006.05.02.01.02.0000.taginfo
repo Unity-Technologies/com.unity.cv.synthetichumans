@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 6,
+    "description": "Girls Deckhand ",
+    "filetype": 3,
+    "gender": 2,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0006.05.02.0000",
+    "skinpath": "Clothing/02/0006/Rigs/05/Skin.02.0006.05.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.011375960893929005,
+    "vatmin": -0.011374044232070446,
+    "weight": 1
+}

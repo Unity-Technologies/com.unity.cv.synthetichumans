@@ -1,0 +1,77 @@
+{
+    "data": [
+        {
+            "group": "ear_left",
+            "jointLabelsOverride": "left_ear",
+            "parent": "head",
+            "points": [
+                4519,
+                4523,
+                4524,
+                4525,
+                4559,
+                4564
+            ]
+        },
+        {
+            "group": "ear_right",
+            "jointLabelsOverride": "right_ear",
+            "parent": "head",
+            "points": [
+                10431,
+                10435,
+                10436,
+                10437,
+                10471,
+                10476
+            ]
+        },
+        {
+            "group": "hip_left",
+            "parent": "hip",
+            "points": [
+                19241,
+                19301,
+                20082,
+                20115,
+                20120,
+                23483,
+                24283,
+                25868
+            ]
+        },
+        {
+            "group": "hip_right",
+            "parent": "hip",
+            "points": [
+                14768,
+                14804,
+                15192,
+                15225,
+                15230,
+                16285,
+                16539,
+                17040
+            ]
+        },
+        {
+            "group": "nose",
+            "jointLabelsOverride": "nose",
+            "parent": "head",
+            "points": [
+                4036,
+                4037,
+                4077,
+                4078,
+                9948,
+                9949,
+                9989,
+                9990,
+                11965,
+                11966,
+                11974,
+                11990
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "age": 1,
+    "clothingelement": 1,
+    "clothingid": 3,
+    "description": "T-Shirt 00",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.01.0003.01.02.0000",
+    "skinpath": "Clothing/01/0003/Rigs/01/Skin.01.0003.01.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.23267558217048645,
+    "vatmin": -0.029320793226361275,
+    "weight": 2
+}

@@ -1,0 +1,16 @@
+{
+    "age": 1,
+    "clothingelement": 2,
+    "clothingid": 28,
+    "description": "Womens Betty Chukka Boot in Navy Jersey Sequin",
+    "filetype": 3,
+    "gender": 1,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0028.01.01.0000",
+    "skinpath": "Clothing/02/0028/Rigs/01/Skin.02.0028.01.01.0000",
+    "tagtype": "vat",
+    "vatmax": 2.38418573772492e-09,
+    "vatmin": -2.38418573772492e-09,
+    "weight": 1
+}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41a95e27f63ff243bd4c6ce33d6e51e, type: 3}
+  m_Name: Head_0030
+  m_EditorClassIdentifier: 
+  linkedAsset: {fileID: 2100000, guid: 8303a2346496d8e44b04547090b45a14, type: 2}
+  isBase: 0
+  age: 7
+  gender: 3
+  ethnicity: 0
+  height: 0
+  fileType: 5
+  humanElement: 2
+  clothingElement: 0
+  materialType: 0
+  eyeColor: 0
+  materialId: 
+  allowPropertyRandomization: 0

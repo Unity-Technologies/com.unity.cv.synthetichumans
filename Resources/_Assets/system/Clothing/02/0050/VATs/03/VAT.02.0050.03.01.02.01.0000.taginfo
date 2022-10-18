@@ -1,0 +1,16 @@
+{
+    "age": 3,
+    "clothingelement": 2,
+    "clothingid": 50,
+    "description": "Timberland Mens Earthkeepers Stormbuck Plain Toe Oxford",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0050.03.01.0000",
+    "skinpath": "Clothing/02/0050/Rigs/03/Skin.02.0050.03.01.0000",
+    "tagtype": "vat",
+    "vatmax": 4.76837147544984e-09,
+    "vatmin": -9.53674295089968e-09,
+    "weight": 2
+}

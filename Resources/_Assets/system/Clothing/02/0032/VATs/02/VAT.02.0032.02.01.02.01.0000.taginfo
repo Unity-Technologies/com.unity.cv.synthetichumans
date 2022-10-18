@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 32,
+    "description": "Reebok SH PRIME COURT LOW",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0032.02.01.0000",
+    "skinpath": "Clothing/02/0032/Rigs/02/Skin.02.0032.02.01.0000",
+    "tagtype": "vat",
+    "vatmax": 1.19209286886246e-09,
+    "vatmin": -1.19209286886246e-09,
+    "weight": 2
+}

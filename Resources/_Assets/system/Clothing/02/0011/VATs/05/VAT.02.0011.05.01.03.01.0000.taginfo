@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 11,
+    "description": "Leather Formal Shoes",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0011.05.01.0000",
+    "skinpath": "Clothing/02/0011/Rigs/05/Skin.02.0011.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.02262536622583866,
+    "vatmin": -0.025047864764928818,
+    "weight": 3
+}

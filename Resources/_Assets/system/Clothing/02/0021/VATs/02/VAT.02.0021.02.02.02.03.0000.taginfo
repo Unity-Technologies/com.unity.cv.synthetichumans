@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 2,
+    "clothingid": 21,
+    "description": "Mens ASV Billfish Boat Shoe in Dark Brown Leather",
+    "filetype": 3,
+    "gender": 2,
+    "height": 3,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0021.02.02.0000",
+    "skinpath": "Clothing/02/0021/Rigs/02/Skin.02.0021.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 0.03019663691520691,
+    "vatmin": -0.024612989276647568,
+    "weight": 2
+}

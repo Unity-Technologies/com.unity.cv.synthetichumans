@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43011cbc41d504e678f9e167ebd5edcb, type: 3}
+  m_Name: SampleGroundPlacementGroup
+  m_EditorClassIdentifier: 
+  Placer:
+    rid: 3318166059643306019
+  AnimationTags:
+  - {fileID: 11400000, guid: 7b57ff264a3b2fc42bc079dcecef0b8d, type: 2}
+  - {fileID: 11400000, guid: 9400c20de2cb5d249a8b284dcccef8cb, type: 2}
+  - {fileID: 11400000, guid: 59b613eb818b6c442846a4226d93c2bd, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3318166059643306019
+      type: {class: BoundBasedGroundPlacer, ns: Unity.CV.SyntheticHumans.Placement, asm: Unity.CV.SyntheticHumans.Runtime}
+      data:
+        PlacementRandomizer:
+          m_Enabled: 1
+          collapsed: 0
+          <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+          MaxRetries: 5
+          Cameras: []
+        ForceToTouchGround: 1

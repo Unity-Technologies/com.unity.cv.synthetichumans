@@ -1,0 +1,16 @@
+{
+    "age": 2,
+    "clothingelement": 4,
+    "clothingid": 0,
+    "description": "Bucket Hat 00",
+    "filetype": 3,
+    "gender": 2,
+    "height": 2,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.04.0000.02.02.0000",
+    "skinpath": "Clothing/04/0000/Rigs/02/Skin.04.0000.02.02.0000",
+    "tagtype": "vat",
+    "vatmax": 9.53674295089968e-09,
+    "vatmin": -9.53674295089968e-09,
+    "weight": 1
+}

@@ -1,0 +1,16 @@
+{
+    "age": 5,
+    "clothingelement": 2,
+    "clothingid": 10,
+    "description": "Great Jones Wingtip ",
+    "filetype": 3,
+    "gender": 1,
+    "height": 1,
+    "loadWeightsFromMesh": 1,
+    "meshpath": "Mesh.02.0010.05.01.0000",
+    "skinpath": "Clothing/02/0010/Rigs/05/Skin.02.0010.05.01.0000",
+    "tagtype": "vat",
+    "vatmax": 0.020753437653183937,
+    "vatmin": -0.025402240455150604,
+    "weight": 3
+}
