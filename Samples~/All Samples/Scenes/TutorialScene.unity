@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -4099,6 +4099,103 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1498946993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498946995}
+  - component: {fileID: 1498946994}
+  m_Layer: 0
+  m_Name: Scenario
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1498946994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498946993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50076aff0af4515b4422166496fdd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Randomizers:
+  - rid: 3817082475363434496
+  - rid: 3817082475363434498
+  configuration: {fileID: 0}
+  constants:
+    randomSeed: 539662031
+    startIteration: 0
+    iterationCount: 100
+    totalIterations: 100
+    instanceCount: 1
+    instanceIndex: 0
+  framesPerIteration: 1
+  m_ProgressPercentage: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 3817082475363434496
+      type: {class: HumanGenerationRandomizer, ns: Unity.CV.SyntheticHumans.Randomizers,
+        asm: Unity.CV.SyntheticHumans.Runtime}
+      data:
+        m_Enabled: 1
+        collapsed: 0
+        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+        activeHumansInEachIteration:
+          collapsed: 0
+          value:
+            rid: 3817082475363434497
+        humanPoolSize: 50
+        poolRefreshIntervalIterations: 50
+        humanGenerationConfigs:
+          collapsed: 0
+          probabilities:
+          - 1
+          uniform: 1
+          m_Categories:
+          - {fileID: 11400000, guid: 8a2be4448fd42cc41b267ccbac466079, type: 2}
+    - rid: 3817082475363434497
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 10
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 3817082475363434498
+      type: {class: SyntheticHumanAnimationRandomizer, ns: Unity.CV.SyntheticHumans.Randomizers,
+        asm: Unity.CV.SyntheticHumans.Runtime}
+      data:
+        m_Enabled: 1
+        collapsed: 0
+        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+--- !u!4 &1498946995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498946993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.1421356, z: -5.1421394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530500628
 GameObject:
   m_ObjectHideFlags: 0

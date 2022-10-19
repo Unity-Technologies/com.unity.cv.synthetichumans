@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43011cbc41d504e678f9e167ebd5edcb, type: 3}
   m_Name: SampleSittingPlacementGroup
   m_EditorClassIdentifier: 
-  Placer:
-    rid: 3318166059643306018
-  AnimationTags:
-  - {fileID: 11400000, guid: 54f4cd7babe473e4cb8939a322a33c38, type: 2}
+  placer:
+    rid: 3817082448419487745
+  animationTags:
+  - {fileID: 11400000, guid: f802f26ec7f987442a5e89d5c161c471, type: 2}
   references:
     version: 2
     RefIds:
-    - rid: 3318166059643306018
+    - rid: 3817082448419487745
       type: {class: SittingPlacer, ns: Unity.CV.SyntheticHumans.Placement, asm: Unity.CV.SyntheticHumans.Runtime}
       data:
-        PlacementRandomizer:
+        placementRandomizer:
           m_Enabled: 1
           collapsed: 0
           <enabledStateCanBeSwitchedByUser>k__BackingField: 1
-          MaxRetries: 5
-          Cameras: []
+          maxRetries: 5
+          cameras: []

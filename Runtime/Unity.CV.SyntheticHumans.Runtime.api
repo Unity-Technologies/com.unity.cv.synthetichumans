@@ -183,8 +183,8 @@ namespace Unity.CV.SyntheticHumans.Labelers
     public class HumanMeshLabeler : UnityEngine.Perception.GroundTruth.CameraLabeler
     {
         public string annotationId = @"human mesh";
-        public HumanMeshLabeler.Encoding encoding;
-        public bool exportMeshTriangles;
+        public HumanMeshLabeler.Encoding encoding = HumanMeshLabeler.Encoding.ASCII;
+        public bool exportMeshTriangles = false;
         public override string description { get; }
         public override string labelerId { get; }
         protected override bool supportsVisualization { get; }
@@ -289,7 +289,7 @@ namespace Unity.CV.SyntheticHumans.Placement
     public class SittingPlacerTag : NavMeshPlacerTag
     {
         public float maximumDirectionAngle = 360f;
-        public float minimumDirectionAngle;
+        public float minimumDirectionAngle = 0f;
         public UnityEngine.Bounds volume;
         public SittingPlacerTag() {}
         public float GetRadius();
@@ -424,7 +424,7 @@ namespace Unity.CV.SyntheticHumans.Randomizers
     {
         [UnityEngine.Tooltip(@"The Synthetic Human Asset Pool that can be used as a global animation pool selection")] public SyntheticHumanAssetPool animationTagPool;
         public UnityEngine.Perception.Randomization.Parameters.CategoricalParameter<Unity.CV.SyntheticHumans.Tags.AnimationTag> animationTags;
-        public bool applyRootMotion;
+        public bool applyRootMotion = false;
         [UnityEngine.HideInInspector] public Unity.CV.SyntheticHumans.Tags.AnimationTag selectedAnimationTag;
         [UnityEngine.Tooltip(@"Will disregard animation tags in Animation Tags in favor of sourcing from Animation Tag Pool object")] public bool useGlobalAnimationPool;
         public UnityEngine.AnimatorOverrideController animatorOverrideController { get; }

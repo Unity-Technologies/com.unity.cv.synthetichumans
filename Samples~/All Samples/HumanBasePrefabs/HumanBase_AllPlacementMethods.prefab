@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d305ab686ce7b468984c17fa2ffa02ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationPlacementGroups:
+  animationPlacementGroups:
   - {fileID: 11400000, guid: f3833225477a00442ba026e1e55fe0f4, type: 2}
   - {fileID: 11400000, guid: 159885630aedb3948a7124155a21d67d, type: 2}
 --- !u!114 &-3789000803304376524
@@ -134,10 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8643184313284693714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f89c8ada840e4cdfb8181a94b987f9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 087a3069835354c549915ac967590b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationTags:
+  useGlobalAnimationPool: 0
+  animationTagPool: {fileID: 0}
+  animationTags:
     collapsed: 0
     probabilities:
     - 0.25
@@ -146,9 +148,9 @@ MonoBehaviour:
     - 0.25
     uniform: 1
     m_Categories:
-    - {fileID: 11400000, guid: 7b57ff264a3b2fc42bc079dcecef0b8d, type: 2}
-    - {fileID: 11400000, guid: 9400c20de2cb5d249a8b284dcccef8cb, type: 2}
-    - {fileID: 11400000, guid: 59b613eb818b6c442846a4226d93c2bd, type: 2}
-    - {fileID: 11400000, guid: 54f4cd7babe473e4cb8939a322a33c38, type: 2}
-  ApplyRootMotion: 0
-  SelectedAnimationTag: {fileID: 0}
+    - {fileID: 11400000, guid: ff57bc6bdea83fa4e99bab75dce86c2f, type: 2}
+    - {fileID: 11400000, guid: 00fb86b179ac28645ac3955b53ee2884, type: 2}
+    - {fileID: 11400000, guid: 16c93aa52e4ee1b4a90d9b9e2735cab6, type: 2}
+    - {fileID: 11400000, guid: f802f26ec7f987442a5e89d5c161c471, type: 2}
+  applyRootMotion: 0
+  selectedAnimationTag: {fileID: 0}

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3c86879a058c147863341155f2a078, type: 3}
+  m_Name: SampleGenerationConfig_shoeless
+  m_EditorClassIdentifier: 
+  assetTagPool: {fileID: 11400000, guid: 8d676dd387530f14a9c7292bc018bef9, type: 2}
+  jointSelfOcclusionDistance: 0.15
+  basePrefab: {fileID: 8643184313284693714, guid: 88bde5e0c0443ad4cb33db801e05d4aa,
+    type: 3}
+  enableColliderGeneration: 1
+  ageRange:
+    collapsed: 0
+    value:
+      rid: 3808701280676741200
+  genders: 0100000002000000
+  ethnicities: 0100000002000000030000000400000005000000
+  heightRange:
+    collapsed: 0
+    value:
+      rid: 3
+  weightRange:
+    collapsed: 0
+    value:
+      rid: 4
+  heightWeightSolver: 3
+  requiredClothingParameters:
+  - clothingElement: 1
+    layer: 0
+  - clothingElement: 3
+    layer: 0
+  preselectedGenerationAssetRefs: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 4
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 3808701280676741200
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 100
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 100
+        <shouldCheckValidRange>k__BackingField: 1
