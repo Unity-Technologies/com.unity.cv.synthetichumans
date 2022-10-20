@@ -890,7 +890,7 @@ namespace Unity.CV.SyntheticHumans.Generators
             renderer.GetPropertyBlock(propBlock, materialIndex);
             var randomizer = new SyntheticHumanMaterialParameterModifier(renderer.sharedMaterials[materialIndex], propBlock);
             randomizer.Randomize();
-            renderer.SetPropertyBlock(propBlock);
+            renderer.SetPropertyBlock(propBlock, materialIndex);
         }
 
         /// <summary>
@@ -953,19 +953,16 @@ namespace Unity.CV.SyntheticHumans.Generators
                 for (var j = 0; j < targetRenderer.sharedMesh.subMeshCount; j++)
                 {
                     var clothingMatResource = new Material((Material)targetAssetRefs.clothingMatTags[i].linkedAsset);
-                    RandomizePatternedClothPattern(clothingMatResource);
                     clothingMats[j] = clothingMatResource;
                 }
                 targetRenderer.materials = clothingMats;
 
-                /*
                 //Need to do this after all the materials are set, otherwise it won't be able to access parameters for randomizing
                 if (targetAssetRefs.clothingMatTags[i].allowPropertyRandomization == SyntheticHumanEnumBool.True)
                 {
                     for (var j = 0; j < targetRenderer.sharedMesh.subMeshCount; j++)
                         RandomizeMaterialParameters(targetRenderer, j);
                 }
-                */
 
                 // Parent to human
                 newClothingItem.transform.parent = targetHuman.transform;
@@ -975,28 +972,6 @@ namespace Unity.CV.SyntheticHumans.Generators
                 // clothingLabel.labels.Add("clothing");
 
             }
-        }
-
-        //Temporary fix for getting clothing material parameters to update during a pipeline run
-        static void RandomizePatternedClothPattern(Material mat)
-        {
-            var floatParameter = new UnityEngine.Perception.Randomization.Parameters.FloatParameter();
-            var colorParameter = new UnityEngine.Perception.Randomization.Parameters.ColorHsvaParameter();
-            var boolParameter = new UnityEngine.Perception.Randomization.Parameters.BooleanParameter();
-
-            if (boolParameter.Sample())
-            {
-                mat.SetInt("_RotatePattern", 1);
-            }
-            else
-            {
-                mat.SetInt("_RotatePattern", 0);
-            }
-            mat.SetColor("_FabricColorA", colorParameter.Sample());
-            mat.SetColor("_FabricColorB", colorParameter.Sample());
-            mat.SetColor("_FabricColorC", colorParameter.Sample());
-            mat.SetColor("_FabricColorD", colorParameter.Sample());
-            mat.SetFloat("_PatternSize", floatParameter.Sample());
         }
 
         static void BindClothesToSkeleton(SingleHumanGenerationAssetRefs targetAssetRefs, GeneratedSkeletonInfo skeletonInfo)

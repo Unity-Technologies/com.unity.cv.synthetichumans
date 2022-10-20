@@ -303,7 +303,7 @@ Material:
     - _ZTestGBuffer: 3
     - _ZTestTransparent: 4
     - _ZWrite: 1
-    - haircolor: 8
+    - haircolor: 0
     m_Colors:
     - Color_25d47ac030f04e2683aa828ea84ca654: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
     - Color_57b6b0da54da4a52b46dff21922048d2: {r: 0.11329652, g: 0.8796892, b: 0.8962264, a: 0}
