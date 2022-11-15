@@ -17,13 +17,6 @@ namespace Unity.CV.SyntheticHumans.Randomizers
         public int maxRetries = 5;
         public List<Camera> cameras;
 
-        static Mathematics.Random s_RandomGenerator;
-
-        protected override void OnScenarioStart()
-        {
-            s_RandomGenerator.state = SamplerState.NextRandomState();
-        }
-
         protected override void OnIterationStart()
         {
             // Initialize NavMesh from all NavMeshSurface components

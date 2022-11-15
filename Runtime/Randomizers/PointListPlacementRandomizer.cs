@@ -31,19 +31,21 @@ namespace Unity.CV.SyntheticHumans.Randomizers
             public FloatParameter zTranslationShift;
         }
 
-
         public PointListSettings pointListSetting;
-
-        protected override void OnScenarioStart()
-        {
-            m_RandomGenerator = SamplerState.CreateGenerator();
-        }
 
         protected override void OnIterationStart()
         {
             base.OnIterationStart();
 
+            m_RandomGenerator.state = SamplerState.NextRandomState();
+
             var tags = tagManager.Query<PointListPlacementRandomizerTag>().ToList();
+
+            if (pointListSetting.anchorPoints.Count == 0)
+            {
+                Debug.LogError($"No positions were provided for the {nameof(PointListPlacementRandomizer)}.");
+                return;
+            }
 
             if (tags.Count > pointListSetting.anchorPoints.Count)
             {

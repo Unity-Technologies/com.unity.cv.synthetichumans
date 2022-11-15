@@ -49,7 +49,6 @@ namespace Unity.CV.SyntheticHumans.Randomizers
             }
 
             m_HumansInPool = new List<GameObject>();
-            m_RandomGenerator = SamplerState.CreateGenerator();
             m_PoolParent = new GameObject($"{m_PoolObjectNamePrefix}_{GetType().Name}");
             m_DetectedStartingIteration = scenario.currentIteration;
 
@@ -63,6 +62,8 @@ namespace Unity.CV.SyntheticHumans.Randomizers
 
         protected override void OnIterationStart()
         {
+            m_RandomGenerator.state = SamplerState.NextRandomState();
+
             if (scenario.currentIteration != m_DetectedStartingIteration && m_IterationInterval == -1)
             {
                 //figure out the iteration increment interval

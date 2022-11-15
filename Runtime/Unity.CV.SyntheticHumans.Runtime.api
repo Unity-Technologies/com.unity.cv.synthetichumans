@@ -356,7 +356,6 @@ namespace Unity.CV.SyntheticHumans.Randomizers
         public int maxRetries = 5;
         public NavMeshPlacementRandomizer() {}
         protected override void OnIterationStart();
-        protected override void OnScenarioStart();
     }
 
     public class NavMeshPlacementRandomizerTag : UnityEngine.Perception.Randomization.Randomizers.RandomizerTag
@@ -395,7 +394,6 @@ namespace Unity.CV.SyntheticHumans.Randomizers
         public PointListPlacementRandomizer.PointListSettings pointListSetting;
         public PointListPlacementRandomizer() {}
         protected override void OnIterationStart();
-        protected override void OnScenarioStart();
         public struct PointListSettings
         {
             [UnityEngine.Tooltip(@"The anchor positions at which the targeted objects should be placed.")] public System.Collections.Generic.List<UnityEngine.GameObject> anchorPoints;
@@ -466,7 +464,6 @@ namespace Unity.CV.SyntheticHumans.Randomizers
         public VolumeProjectionPlacementRandomizer() {}
         public UnityEngine.Vector3 GetProjectedSpawnPoint(UnityEngine.Collider inputSpawnCollider);
         protected override void OnIterationStart();
-        protected override void OnScenarioStart();
         public struct VolumeProjectionSettings
         {
             public UnityEngine.Perception.Randomization.Parameters.Vector3Parameter boundsSampler;

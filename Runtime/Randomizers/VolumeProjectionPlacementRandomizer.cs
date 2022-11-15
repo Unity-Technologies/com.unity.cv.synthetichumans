@@ -32,14 +32,11 @@ namespace Unity.CV.SyntheticHumans.Randomizers
 
         public VolumeProjectionSettings volumeProjectionSetting;
 
-        protected override void OnScenarioStart()
-        {
-            m_RandomGenerator = SamplerState.CreateGenerator();
-        }
-
         protected override void OnIterationStart()
         {
             base.OnIterationStart();
+
+            m_RandomGenerator.state = SamplerState.NextRandomState();
 
             var taggedProjectors = tagManager.Query<PlacementVolumeProjectorTag>().ToList();
             if (taggedProjectors.Count == 0)
