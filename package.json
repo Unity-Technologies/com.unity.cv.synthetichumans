@@ -6,7 +6,7 @@
   "description": "Tools for diverse contextual generation and placement of synthetic humans.",
   "dependencies": {
     "com.unity.ai.navigation": "1.0.0-exp.4",
-    "com.unity.perception": "0.16.0-preview.2",
+    "com.unity.perception": "1.0.0-preview.1",
     "com.unity.nuget.newtonsoft-json": "3.0.2"
   },
   "samples": [
