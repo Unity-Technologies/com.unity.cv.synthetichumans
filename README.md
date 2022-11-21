@@ -1,6 +1,3 @@
-## :warning: This repository is automatically generated. Do not attempt to commit to it directly.
----
-
 <p align="center">
 <img width="500" src="./Documentation~/Images/unity-wide-whiteback.png">
 </p>
