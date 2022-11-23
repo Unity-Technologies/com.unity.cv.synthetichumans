@@ -22,12 +22,4 @@ Go through a step-by-step tutorial on adding the SyntheticHumans package to a pr
 
 ## Package Version Compatibility
 
-The SyntheticHumans package requires the Perception package.
-
-* Current SyntheticHumans version is compatible with:
-    * `com.unity.perception: 0.16.0-preview.2`
-    * Git tag: [#RC-0.16.0-preview.2](https://github.com/Unity-Technologies/perception?path=/com.unity.perception/com.unity.perception#RC-0.16.0-preview.2)
-
-* SyntheticHumans versions #CS2638 to #CS2873 are compatible with:
-    * `com.unity.perception: 0.15.0-preview.1`
-    * Git tag: [#RC-0.15.0-preview.1](https://github.com/Unity-Technologies/perception?path=/com.unity.perception/com.unity.perception#RC-0.15.0-preview.1)
+The SyntheticHumans package requires the Perception package. The current SyntheticHumans version is compatible with `com.unity.perception: 1.0.0-preview.1`. Older versions of SyntheticHumans may require older versions of Perception.
