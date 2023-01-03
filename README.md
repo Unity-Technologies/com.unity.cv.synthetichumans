@@ -16,7 +16,7 @@ The SyntheticHumans package gives you the ability to procedurally generate and r
 
 Install the SyntheticHumans package into an existing project. Recommended for users with prior Unity experience.
 
-**[Tutorial: Introduction to SyntheticHumans](https://github.com/Unity-Technologies/com.unity.cv.synthetichumans/wiki/SyntheticHumans-Tutorial)**
+**[Tutorial: Introduction to SyntheticHumans](https://github.com/Unity-Technologies/com.unity.cv.synthetichumans/wiki/Synthetic-Humans-Tutorial)**
 
 Go through a step-by-step tutorial on adding the SyntheticHumans package to a project, customizing its settings, generating humans, animating them, and placing them into your Scenes. 
 
