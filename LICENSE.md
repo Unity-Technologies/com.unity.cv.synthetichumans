@@ -2,7 +2,7 @@
             NON-COMMERCIAL SOFTWARE LICENSE AGREEMENT
 This non-commercial software license agreement (the **“Agreement”**) is entered into as of the date
 at which you access the Work and/or Derivative Work(s) (as defined below) between **Unity
-Technologies ApS** (hereinafter, **“Unity”**, **“Us”**, **“we”**) and **you** (hereinafter **“You”**, **“Your”**).
+Technologies SF, on behalf of itself and its affiliates** (hereinafter, **“Unity”**, **“Us”**, **“we”**) and **you** (hereinafter **“You”**, **“Your”**).
 Within this Agreement, You and Unity may be referred to individually as a **“Party”**, and
 collectively as the **“Parties”**.
 In consideration of the mutual promises and covenants contained herein, You and Unity agree as
@@ -83,8 +83,8 @@ recording, and Sui Generis Database Rights, without regard to how the rights are
 labeled or categorized. The rights specified in Subsection 3.7 are not Licensed
 Rights;
 
-1.3.8. **Mandatory Open-Source Agreement** means the GNU General Public Agreement,
-the GNU Lesser General Public Agreement, and other substantially similar open-
+1.3.8. **Mandatory Open-Source Agreement** means the GNU General Public License,
+the GNU Lesser General Public License, and other substantially similar open-
 source licenses that preclude the imposition of further restrictions on copying,
 modifying, or redistributing materials subject to their terms;
 
@@ -408,7 +408,7 @@ will be waived and no failure to comply consented to unless expressly agreed to 
         COMMUNITY GUIDELINES
 
 These community guidelines are entered into between you (**“you”**, **“your”**) and Unity
-Technologies ApS and its Affiliates (**“Unity”**, **“we”**, **“us”**) pursuant to an applicable noncommercial software license agreement (the **“Agreement”**) governing your access and/or use of
+Technologies SF, on behalf of itself and its affiliates (**“Unity”**, **“we”**, **“us”**) pursuant to an applicable noncommercial software license agreement (the **“Agreement”**) governing your access and/or use of
 the Work and/or Derivative Works of same (as defined in the Agreement).
 
 **1. Pledge and Acceptance**
@@ -417,7 +417,7 @@ By accessing and/or using the Work and/or Derivative Work(s) of same, or by othe
 the Agreement, You hereby certify that you have read and accept the following limitations on the
 use of the Work and/or Derivative Works governed by the Agreement. You further acknowledge
 and understand that your use of the Work and/or Derivative Work(s) under the Agreement is
-entirely your responsibility, and that Unity Technologies ApS and its Affiliates take and will accept
+entirely your responsibility, and that Unity Technologies SF and its affiliates take and will accept
 no responsibility with respect to same, as further described in Section 6 of the Agreement and
 Sections 4, 5, and 6 of this Appendix A. Unity expressly undertakes no responsibility concerning
 the monitoring and/or enforcement of these guidelines.
